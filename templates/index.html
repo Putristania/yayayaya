@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediksi gagal jantung</title>
+</head>
+
+<body bgcolor='#27445c' text='white'>
+<h1>
+<b>
+<i>
+<font size=15>
+<center>Prediksi Gagal Jantung</center>
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Masukkan detail kesehatan anda untuk memeriksa apakah berpeulang menyebabkan kematian atau tidak!</h2>
+<h4> 
+<img src="https://images.bisnis-cdn.com/thumb/posts/2021/11/03/1461480/serangan-jantung.jpg?w=744&h=465" style="float: right; width: 50%; margin-left: 1%; margin-bottom: 0.5em;">
+
+<form action="{{url_for('predict')}}" method="post">
+   <p> Umur : <input type='text' name='Umur' placeholder='Masukkan Umur' required='required' />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anemia : <input type='text' name='Anemia' placeholder='0 = Tidak 1 = Iya' required='required'/></p>
+    <p> Kadar kreatinin fosfokinase: <input type='text' name='Kadar kreatinin fosfokinase' placeholder='mcg/L' required='required' /></p>
+    <p> Diabetes : <input type='text' name='Diabetes' placeholder='0 = Tidak 1 = Iya' required='required' /></p>
+    <p> Fraksi Ejeksi : <input type='text' name='Fraksi Ejeksi' placeholder='Persentase' required='required' /></p>
+    <p> Tekanan Darah Tinggi : <input type='text' name='Tekanan Darah Tinggi' placeholder='0 = Tidak 1 = Iya' required='required' /></p>
+    <p> Trombosit : <input type='text' name='Trombosit' placeholder='kiloplatelets/mL' required='required' /></p>
+    <p> Serum creatinine : <input type='text' name='Serum creatinine' placeholder='mg/dL' required='required' /></p>
+    <p> Serum Sodium : <input type='text' name='Serum Sodium' placeholder='mEq/L' required='required' /></p>
+    <p> Jenis Kelamin : <input type='text' name='Jenis Kelamin' placeholder='0 = Perempuan 1 = Laki-laki' required='required' />
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merokok : <input type='text' name='Merokok' placeholder='0 = Tidak 1 = Iya' required='required' /></p>
+    <p> Waktu : <input type='text' name='Time' placeholder ='Waktu tindak lanjut (hari)' required='required' /></p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Prediksi</button>
+</form>
+</h4>
+<h2>
+<b>
+{{ Hasil_Prediksi }}
+</b>
+</h2>
+</body>
+</html>
